@@ -27,7 +27,7 @@ public class LogicGateMod
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        //modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
