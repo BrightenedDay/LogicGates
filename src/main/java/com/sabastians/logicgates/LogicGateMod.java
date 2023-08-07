@@ -1,6 +1,10 @@
 package com.sabastians.logicgates;
 
 import com.mojang.logging.LogUtils;
+import com.sabastians.logicgates.registers.ModBlocks;
+import com.sabastians.logicgates.registers.ModItems;
+import com.sabastians.logicgates.registers.ModdedCreativeTabs;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -23,6 +27,11 @@ public class LogicGateMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModdedCreativeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -35,6 +44,9 @@ public class LogicGateMod
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        //if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+        //    event.accept(ModItems.SPACE_MIRROR);
+        //}
     }
 
     @SubscribeEvent

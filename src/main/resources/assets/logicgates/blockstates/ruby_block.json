@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "logicgates:block/ruby_block"
+    }
+  }
+}

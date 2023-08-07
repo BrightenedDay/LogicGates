@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "logicgates:ruby_block"
+    }
+  },
+  "result": {
+    "item": "logicgates:space_mirror",
+    "count": 1
+  }
+}
